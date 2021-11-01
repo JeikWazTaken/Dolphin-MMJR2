@@ -2,15 +2,21 @@
 
 package org.dolphinemu.dolphinemu.features.settings.model;
 
+import android.app.Application;
 import android.content.Context;
 import android.text.TextUtils;
 import android.widget.Toast;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import org.dolphinemu.dolphinemu.NativeLibrary;
 import org.dolphinemu.dolphinemu.R;
 import org.dolphinemu.dolphinemu.features.settings.ui.SettingsActivityView;
 import org.dolphinemu.dolphinemu.features.settings.utils.SettingsFile;
 import org.dolphinemu.dolphinemu.services.GameFileCacheService;
+import org.dolphinemu.dolphinemu.ui.main.MainActivity;
 import org.dolphinemu.dolphinemu.utils.DirectoryInitialization;
 import org.dolphinemu.dolphinemu.utils.IniFile;
 
@@ -211,6 +217,7 @@ public class Settings implements Closeable
     {
       if (context != null)
         Toast.makeText(context, R.string.settings_saved, Toast.LENGTH_SHORT).show();
+
 
       for (Map.Entry<String, IniFile> entry : mIniFiles.entrySet())
       {

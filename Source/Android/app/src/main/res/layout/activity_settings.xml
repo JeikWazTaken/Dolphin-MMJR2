@@ -2,5 +2,24 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frame_content"
-    android:background="@color/dolphin_background" />
+    android:background="@color/dolphin_background">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settingsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:title="Settings"
+            app:menu="@menu/menu_settings"
+            app:titleTextColor="@color/m3_primary_text_color"
+            android:background="?android:statusBarColor"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+</FrameLayout>

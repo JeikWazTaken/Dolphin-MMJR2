@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -78,6 +79,9 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
     mPresenter = new SettingsActivityPresenter(this, getSettings());
     mPresenter.onCreate(savedInstanceState, menuTag, gameID, revision, isWii,
             getApplicationContext());
+    Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+
+    toolbar.setOnMenuItemClickListener(this::onOptionsItemSelected);
   }
 
   @Override
@@ -142,10 +146,14 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
       if (areSystemAnimationsEnabled())
       {
         transaction.setCustomAnimations(
-                R.animator.settings_enter,
-                R.animator.settings_exit,
-                R.animator.settings_pop_enter,
-                R.animator.setttings_pop_exit);
+//                R.animator.settings_enter,
+//                R.animator.settings_exit,
+//                R.animator.settings_pop_enter,
+//                R.animator.setttings_pop_exit);
+          R.anim.abc_grow_fade_in_from_bottom,
+          R.anim.abc_fade_out,
+          R.anim.abc_fade_in,
+          R.anim.abc_shrink_fade_out_from_bottom);
       }
 
       transaction.addToBackStack(null);

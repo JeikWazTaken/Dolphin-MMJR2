@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import org.dolphinemu.dolphinemu.NativeLibrary;
 import org.dolphinemu.dolphinemu.R;
 import org.dolphinemu.dolphinemu.model.GameFile;
@@ -39,11 +41,12 @@ public final class GameDetailsDialog extends DialogFragment
   {
     GameFile gameFile = GameFileCacheService.addOrGet(getArguments().getString(ARG_GAME_PATH));
 
-    AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
+    AlertDialog.Builder builder = new MaterialAlertDialogBuilder(requireActivity());
     ViewGroup contents = (ViewGroup) getActivity().getLayoutInflater()
             .inflate(R.layout.dialog_game_details, null);
 
     ImageView banner = contents.findViewById(R.id.banner);
+
 
     TextView textTitle = contents.findViewById(R.id.text_game_title);
     TextView textDescription = contents.findViewById(R.id.text_description);

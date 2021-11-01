@@ -3,12 +3,14 @@
 package org.dolphinemu.dolphinemu.adapters;
 
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -60,6 +62,7 @@ public class PlatformPagerAdapter extends FragmentPagerAdapter
     // TODO: This workaround will eventually not be necessary; switch to more legit methods when that is the case
     // TODO: Also remove additional hax from styles.xml
     Drawable drawable = mContext.getResources().getDrawable(TAB_ICONS[position]);
+    drawable.setColorFilter(ContextCompat.getColor(this.mContext,R.color.m3_tab_icon_color), PorterDuff.Mode.SRC_ATOP);
     drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
 
     ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);

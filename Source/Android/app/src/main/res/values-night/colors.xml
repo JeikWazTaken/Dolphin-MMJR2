@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dolphin_background">#000000</color>
+    <color name="dolphin_background">@color/material_dynamic_neutral10</color>
+
     <color name="divider">@color/divider_dark</color>
     <color name="text">@color/text_dark</color>
     <color name="dialog_background">#151515</color>
+
+    <color name="m3_primary_color">@color/material_dynamic_primary20</color>
+    <color name="m3_primary_text_color">@color/material_dynamic_primary95</color>
+    <color name="m3_secondary_color">@color/material_dynamic_secondary20</color>
+    <color name="m3_secondary_text_color">@color/material_dynamic_secondary80</color>
+    <color name="m3_tab_icon_color">@color/material_dynamic_primary95</color>
+
 </resources>

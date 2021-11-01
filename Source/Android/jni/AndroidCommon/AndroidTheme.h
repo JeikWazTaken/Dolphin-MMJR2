@@ -31,8 +31,8 @@ constexpr float F_RED[3] = {RED_MASK(RED) / 255.0f, GREEN_MASK(RED) / 255.0f, BL
 constexpr float F_BLUE[3] = {RED_MASK(BLUE) / 255.0f, GREEN_MASK(BLUE) / 255.0f, BLUE_MASK(BLUE) / 255.0f};
 constexpr float F_GREEN[3] = {RED_MASK(GREEN) / 255.0f, GREEN_MASK(GREEN) / 255.0f, BLUE_MASK(GREEN) / 255.0f};
 
-const float *currentFloat{F_PURPLE};
-const u32 *currentInt{&PURPLE};
+const float *currentFloat{F_BLUE};
+const u32 *currentInt{&BLUE};
 }  // Anonymous namespace
 
 void Set(const std::string& theme);

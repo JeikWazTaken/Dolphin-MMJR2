@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
-def keystorePropertiesFile = rootProject.file("keystore.properties");
+def keystorePropertiesFile = rootProject.file("android/keystore.properties");
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     compileOptions {
         // Flag to enable support for the new language APIs
@@ -27,7 +27,7 @@ android {
 
     defaultConfig {
         applicationId "org.dolphinemu.mmjr"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 29
 
         versionCode getBuildVersionCode()
@@ -98,7 +98,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android.material:material:1.5.0-alpha05'
 
     // Android TV UI libraries.
     implementation 'androidx.leanback:leanback:1.0.0'

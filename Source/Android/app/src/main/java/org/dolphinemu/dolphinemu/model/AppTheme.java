@@ -27,7 +27,7 @@ public class AppTheme
   public static final String DOLPHIN_BLUE = "dolphinblue";
   public static final String LUIGI_GREEN = "luigigreen";
 
-  public static final String DEFAULT = MMJR_PURPLE;
+  public static final String DEFAULT = DOLPHIN_BLUE;
 
   public static AbstractStringSetting APPLICATION_THEME = new AbstractStringSetting() {
     @Override

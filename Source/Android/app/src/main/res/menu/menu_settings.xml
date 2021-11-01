@@ -6,6 +6,7 @@
         android:id="@+id/menu_save_exit"
         android:title="@string/preferences_save_exit"
         android:icon="@drawable/ic_quicksave"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        />
 
 </menu>

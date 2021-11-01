@@ -25,7 +25,7 @@ public final class PlatformGamesFragment extends Fragment implements PlatformGam
 
   private GameAdapter mAdapter;
   private RecyclerView mRecyclerView;
-  private SwipeRefreshLayout mSwipeRefresh;
+//  private SwipeRefreshLayout mSwipeRefresh;
   private SwipeRefreshLayout.OnRefreshListener mOnRefreshListener;
 
   public static PlatformGamesFragment newInstance(Platform platform)
@@ -64,9 +64,9 @@ public final class PlatformGamesFragment extends Fragment implements PlatformGam
 
     TypedValue typedValue = new TypedValue();
     requireActivity().getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
-    mSwipeRefresh.setColorSchemeColors(typedValue.data);
+//    mSwipeRefresh.setColorSchemeColors(typedValue.data);
 
-    mSwipeRefresh.setOnRefreshListener(mOnRefreshListener);
+//    mSwipeRefresh.setOnRefreshListener(mOnRefreshListener);
 
     mRecyclerView.setLayoutManager(layoutManager);
     mRecyclerView.setAdapter(mAdapter);
@@ -110,18 +110,18 @@ public final class PlatformGamesFragment extends Fragment implements PlatformGam
   {
     mOnRefreshListener = listener;
 
-    if (mSwipeRefresh != null)
-      mSwipeRefresh.setOnRefreshListener(listener);
+//    if (mSwipeRefresh != null)
+//      mSwipeRefresh.setOnRefreshListener(listener);
   }
 
   public void setRefreshing(boolean refreshing)
   {
-    mSwipeRefresh.setRefreshing(refreshing);
+//    mSwipeRefresh.setRefreshing(refreshing);
   }
 
   private void findViews(View root)
   {
-    mSwipeRefresh = root.findViewById(R.id.swipe_refresh);
+//    mSwipeRefresh = root.findViewById(R.id.swipe_refresh);
     mRecyclerView = root.findViewById(R.id.grid_games);
   }
 }
