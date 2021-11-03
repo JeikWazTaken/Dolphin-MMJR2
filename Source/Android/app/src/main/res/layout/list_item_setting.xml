@@ -20,7 +20,7 @@
         android:layout_marginTop="20dp"
         android:id="@+id/text_setting_name"
         android:textSize="16sp"
-        android:textColor="@color/m3_primary_text_color"/>
+        android:textColor="?attr/colorControlNormal"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,6 +35,6 @@
         android:id="@+id/text_setting_description"
         android:layout_below="@+id/text_setting_name"
         android:layout_alignStart="@+id/text_setting_name"
-        android:textColor="@color/m3_primary_text_color"/>
+        android:textColor="?attr/colorControlNormal"/>
 
 </RelativeLayout>

@@ -136,8 +136,8 @@ public final class SettingsFragment extends Fragment implements SettingsFragment
 
     recyclerView.setAdapter(mAdapter);
     recyclerView.setLayoutManager(manager);
-    recyclerView.setItemAnimator(new DefaultItemAnimator());
-    recyclerView.addItemDecoration(new DividerItemDecoration(requireActivity(), null));
+//    recyclerView.setItemAnimator(new DefaultItemAnimator());
+//    recyclerView.addItemDecoration(new DividerItemDecoration(requireActivity(), null));
 
     SettingsActivityView activity = (SettingsActivityView) getActivity();
     mPresenter.onViewCreated(menuTag, activity.getSettings());

@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
@@ -51,7 +52,7 @@ public final class MainActivity extends AppCompatActivity
   private ViewPager mViewPager;
   private Toolbar mToolbar;
   private TabLayout mTabLayout;
-  private FloatingActionButton mFab;
+  private ExtendedFloatingActionButton mFab;
 
   private final MainPresenter mPresenter = new MainPresenter(this, this);
 

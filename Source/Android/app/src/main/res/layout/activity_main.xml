@@ -43,16 +43,16 @@
         android:paddingRight="1dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/button_add_directory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:backgroundTint="@color/material_dynamic_primary90"
-        app:tint="@color/material_dynamic_neutral10"
-        android:src="@drawable/ic_add"
+        android:layout_margin="20dp"
         app:borderWidth="0dp"
         app:layout_anchor="@+id/pager_platforms"
-        app:layout_anchorGravity="bottom|right|end" />
+        app:layout_anchorGravity="bottom|right|end"
+        android:text="Add game"
+        app:icon="@drawable/ic_add"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -34,10 +34,10 @@
     </style>
 
     <style name="Theme.DolphinMain.MmjrPurple" parent="DolphinBase">
-        <item name="colorPrimary">@color/material_dynamic_primary90</item>
-        <item name="colorPrimaryDark">@color/material_dynamic_primary20</item>
-        <!--        <item name="colorPrimary">@color/purple_primary</item>-->
-        <!--        <item name="colorPrimaryDark">@color/purple_primary_dark</item>-->
+        <item name="colorPrimary">@color/material_dynamic_primary20</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary30</item>
+        <!--        <item name="colorPrimary">@color/m3_primary_color</item>-->
+        <!--        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>-->
         <!--        <item name="colorAccent">@color/purple_accent</item>-->
         <!--        <item name="colorOnPrimary">@color/purple_onprimary</item>-->
         <!--        <item name="colorGradientPrimaryStart">@color/purple_gradient_primary_start</item>-->
@@ -63,18 +63,18 @@
     </style>
 
     <style name="Theme.DolphinMain.DolphinBlue" parent="DolphinBase">
-        <item name="colorPrimary">@color/material_dynamic_primary90</item>
-        <item name="colorPrimaryDark">@color/material_dynamic_primary20</item>
-<!--        <item name="colorPrimary">@color/dolphin_blue</item>-->
-<!--        <item name="colorPrimaryDark">@color/dolphin_blue_dark</item>-->
-<!--        <item name="colorAccent">@color/dolphin_purple</item>-->
-<!--        <item name="colorOnPrimary">@color/dolphin_purple</item>-->
-<!--        <item name="colorGradientPrimaryStart">@color/blue_gradient_primary_start</item>-->
-<!--        <item name="colorGradientPrimaryCenter">@color/blue_gradient_primary_center</item>-->
-<!--        <item name="colorGradientPrimaryEnd">@color/blue_gradient_primary_end</item>-->
-<!--        <item name="colorGradientSecondaryStart">@color/blue_gradient_secondary_start</item>-->
-<!--        <item name="colorGradientSecondaryEnd">@color/blue_gradient_secondary_end</item>-->
-<!--        <item name="textColorAccent">@color/dolphin_blue_text_accent</item>-->
+        <item name="colorPrimary">@color/material_dynamic_primary20</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary30</item>
+        <!--        <item name="colorPrimary">@color/dolphin_blue</item>-->
+        <!--        <item name="colorPrimaryDark">@color/dolphin_blue_dark</item>-->
+        <!--        <item name="colorAccent">@color/dolphin_purple</item>-->
+        <!--        <item name="colorOnPrimary">@color/dolphin_purple</item>-->
+        <!--        <item name="colorGradientPrimaryStart">@color/blue_gradient_primary_start</item>-->
+        <!--        <item name="colorGradientPrimaryCenter">@color/blue_gradient_primary_center</item>-->
+        <!--        <item name="colorGradientPrimaryEnd">@color/blue_gradient_primary_end</item>-->
+        <!--        <item name="colorGradientSecondaryStart">@color/blue_gradient_secondary_start</item>-->
+        <!--        <item name="colorGradientSecondaryEnd">@color/blue_gradient_secondary_end</item>-->
+        <!--        <item name="textColorAccent">@color/dolphin_blue_text_accent</item>-->
     </style>
 
     <style name="Theme.DolphinMain.LuigiGreen" parent="DolphinBase">
@@ -92,11 +92,20 @@
     </style>
 
     <!-- SettingsActivity Themes, use default action bar, and mandate margins. -->
-    <style name="DolphinSettingsBase" parent="Theme.AppCompat.DayNight.DarkActionBar">
+
+    <style name="Dolphin.Material.SettingsBase" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/dolphin_background</item>
+        <item name="android:navigationBarColor">@color/dolphin_background</item>
+
+
+    </style>
+
+    <style name="DolphinSettingsBase" parent="Theme.Material3.DynamicColors.DayNight">
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="textColor">@color/text</item>
-        <item name="colorDivider">@color/divider</item>
-        <item name="alertDialogTheme">@style/DolphinDialogBase</item>
+
 
         <item name="colorGradientPrimaryStart">@null</item>
         <item name="colorGradientPrimaryCenter">@null</item>
@@ -105,74 +114,34 @@
         <item name="colorGradientSecondaryCenter">@null</item>
         <item name="colorGradientSecondaryEnd">@null</item>
         <item name="colorOnGradientPrimary">@android:color/white</item>
-        <item name="textColorOnPrimary">@android:color/white</item>
-        <item name="textColorAccent">@android:color/white</item>
     </style>
 
     <style name="Theme.DolphinSettings.MmjrPurple" parent="DolphinSettingsBase">
-        <item name="colorPrimary">@color/material_dynamic_neutral10</item>
-        <item name="colorPrimaryDark">@color/material_dynamic_primary10</item>
-        <item name="colorAccent">@color/material_dynamic_primary80</item>
+        <item name="colorPrimary">@color/material_dynamic_primary95</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>
+        <item name="colorAccent">@color/material_dynamic_primary70</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary100</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/material_dynamic_neutral10</item>
         <item name="android:navigationBarColor">@color/dolphin_background</item>
-        <!--        <item name="colorGradientPrimaryStart">@color/purple_gradient_primary_start</item>-->
-        <!--        <item name="colorGradientPrimaryCenter">@color/purple_gradient_primary_center</item>-->
-        <!--        <item name="colorGradientPrimaryEnd">@color/purple_gradient_primary_end</item>-->
-        <!--        <item name="colorGradientSecondaryStart">@color/purple_gradient_secondary_start</item>-->
-        <!--        <item name="colorGradientSecondaryEnd">@color/purple_gradient_secondary_end</item>-->
-        <!--        <item name="textColorAccent">@color/purple_text_accent</item>-->
     </style>
 
     <style name="Theme.DolphinSettings.NeonRed" parent="DolphinSettingsBase">
-        <!--        <item name="colorPrimary">@color/neon_red_primary</item>-->
-        <!--        <item name="colorPrimaryDark">@color/neon_red_primary_dark</item>-->
-        <!--        <item name="colorAccent">@color/neon_red_accent</item>-->
-        <!--        <item name="colorOnPrimary">@color/neon_red_onprimary</item>-->
-        <!--        <item name="colorGradientPrimaryStart">@color/red_gradient_primary_start</item>-->
-        <!--        <item name="colorGradientPrimaryCenter">@color/red_gradient_primary_center</item>-->
-        <!--        <item name="colorGradientPrimaryEnd">@color/red_gradient_primary_end</item>-->
-        <!--        <item name="colorGradientSecondaryStart">@color/red_gradient_secondary_start</item>-->
-        <!--        <item name="colorGradientSecondaryEnd">@color/red_gradient_secondary_end</item>-->
-        <!--        <item name="textColorOnPrimary">@color/neon_red_primary</item>-->
-        <!--        <item name="textColorAccent">@color/neon_red_text_accent</item>-->
+
     </style>
 
-    <style name="Theme.DolphinSettings.DolphinBlue" parent="DolphinSettingsBase">
-        <item name="colorPrimary">@color/material_dynamic_neutral10</item>
-        <item name="colorPrimaryDark">@color/material_dynamic_primary10</item>
-        <item name="colorAccent">@color/material_dynamic_primary80</item>
+    <style name="Theme.DolphinSettings.DolphinBlue" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>
+        <item name="colorAccent">@color/material_dynamic_primary70</item>
         <item name="colorOnPrimary">@color/material_dynamic_primary100</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/material_dynamic_neutral10</item>
+        <item name="android:statusBarColor">@color/dolphin_background</item>
         <item name="android:navigationBarColor">@color/dolphin_background</item>
-        <!--        <item name="colorPrimary">@color/dolphin_blue</item>-->
-        <!--        <item name="colorPrimaryDark">@color/dolphin_blue_dark</item>-->
-        <!--        <item name="colorAccent">@color/dolphin_purple</item>-->
-        <!--        <item name="colorOnPrimary">@color/dolphin_purple</item>-->
-        <!--        <item name="colorGradientPrimaryStart">@color/blue_gradient_primary_start</item>-->
-        <!--        <item name="colorGradientPrimaryCenter">@color/blue_gradient_primary_center</item>-->
-        <!--        <item name="colorGradientPrimaryEnd">@color/blue_gradient_primary_end</item>-->
-        <!--        <item name="colorGradientSecondaryStart">@color/blue_gradient_secondary_start</item>-->
-        <!--        <item name="colorGradientSecondaryEnd">@color/blue_gradient_secondary_end</item>-->
-        <!--        <item name="textColorAccent">@color/dolphin_blue_text_accent</item>-->
     </style>
 
     <style name="Theme.DolphinSettings.LuigiGreen" parent="DolphinSettingsBase">
-        <item name="colorPrimary">@color/luigi_green_primary</item>
-        <item name="colorPrimaryDark">@color/luigi_green_primary_dark</item>
-        <item name="colorAccent">@color/luigi_green_accent</item>
-        <item name="colorOnPrimary">@color/luigi_green_onprimary</item>
-        <item name="colorGradientPrimaryStart">@color/green_gradient_primary_start</item>
-        <item name="colorGradientPrimaryCenter">@color/green_gradient_primary_center</item>
-        <item name="colorGradientPrimaryEnd">@color/green_gradient_primary_end</item>
-        <item name="colorGradientSecondaryStart">@color/green_gradient_secondary_start</item>
-        <item name="colorGradientSecondaryEnd">@color/green_gradient_secondary_end</item>
-        <item name="textColorOnPrimary">@color/luigi_green_primary</item>
-        <item name="textColorAccent">@color/luigi_green_text_accent</item>
+
     </style>
 
     <!-- EmulationActivity Themes, no action bar, transparent navigation bar. -->
@@ -203,10 +172,10 @@
     </style>
 
     <style name="Theme.DolphinEmulation.MmjrPurple" parent="DolphinEmulationBase">
-        <item name="colorPrimary">@color/purple_primary</item>
-        <item name="colorPrimaryDark">@color/purple_primary_dark</item>
-        <item name="colorAccent">@color/purple_accent</item>
-        <item name="colorOnPrimary">@color/purple_onprimary</item>
+        <item name="colorPrimary">@color/m3_primary_color</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>
+        <item name="colorAccent">@color/m3_primary_color</item>
+        <item name="colorOnPrimary">@color/material_dynamic_primary90</item>
         <item name="colorGradientPrimaryStart">@color/purple_gradient_primary_start</item>
         <item name="colorGradientPrimaryCenter">@color/purple_gradient_primary_center</item>
         <item name="colorGradientPrimaryEnd">@color/purple_gradient_primary_end</item>
@@ -284,8 +253,8 @@
     </style>
 
     <style name="Theme.DolphinTv.MmjrPurple" parent="DolphinTvBase">
-        <item name="colorPrimary">@color/purple_primary</item>
-        <item name="colorPrimaryDark">@color/purple_primary_dark</item>
+        <item name="colorPrimary">@color/m3_primary_color</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>
         <item name="colorAccent">@color/purple_accent</item>
         <item name="colorOnPrimary">@color/purple_onprimary</item>
         <item name="colorGradientPrimaryStart">@color/purple_gradient_primary_start</item>
@@ -352,11 +321,12 @@
         <item name="android:gravity">center_vertical|left</item>
         <item name="android:paddingLeft">32dp</item>
         <item name="android:paddingRight">32dp</item>
-        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="cornerRadius">16dp</item>
     </style>
 
     <style name="OverlayInGameMenuOption" parent="InGameMenuOption">
-        <item name="android:textColor">@color/m3_primary_text_color</item>
+        <item name="android:textColor">@color/button_text_color</item>
         <item name="android:padding">8dp</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
@@ -374,8 +344,8 @@
 
     <!-- Inherit from a base file picker theme that handles day/night -->
     <style name="FilePickerTheme" parent="FilePickerBaseTheme">
-        <item name="colorPrimary">@color/purple_primary</item>
-        <item name="colorPrimaryDark">@color/purple_primary_dark</item>
+        <item name="colorPrimary">@color/m3_primary_color</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>
         <item name="colorAccent">@color/dolphin_accent_gamecube</item>
 
         <!--&lt;!&ndash; Setting a divider is entirely optional &ndash;&gt;-->
@@ -390,8 +360,8 @@
     </style>
 
     <style name="FilePickerAlertDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
-        <item name="colorPrimary">@color/purple_primary</item>
-        <item name="colorPrimaryDark">@color/purple_primary_dark</item>
+        <item name="colorPrimary">@color/m3_primary_color</item>
+        <item name="colorPrimaryDark">@color/material_dynamic_primary90</item>
         <item name="colorAccent">@color/dolphin_accent_gamecube</item>
     </style>
 

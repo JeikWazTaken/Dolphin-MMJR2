@@ -51,7 +51,7 @@
         android:layout_height="0dp"
         tools:text="2.50"
         android:textSize="16sp"
-        android:textColor="?attr/textColor"
+        android:textColor="?attr/colorControlNormal"
         android:layout_toStartOf="@id/text_units"
         android:layout_alignTop="@id/seekbar"
         android:layout_alignBottom="@id/seekbar" />
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         tools:text="x"
         android:textSize="16sp"
-        android:textColor="?attr/textColor"
+        android:textColor="?attr/colorControlNormal"
         android:layout_alignTop="@+id/text_value"
         android:layout_alignEnd="@id/text_setting_name" />
 

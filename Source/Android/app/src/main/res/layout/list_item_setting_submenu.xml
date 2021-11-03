@@ -8,6 +8,7 @@
     android:focusable="true"
     android:clickable="true">
 
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -18,7 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_margin="20dp"
         android:id="@+id/text_setting_name"
-        android:textSize="16sp"
-        android:textColor="@color/m3_primary_text_color"/>
+        android:textSize="20sp"
+        android:textColor="?attr/colorControlNormal"
+        />
 
 </RelativeLayout>
