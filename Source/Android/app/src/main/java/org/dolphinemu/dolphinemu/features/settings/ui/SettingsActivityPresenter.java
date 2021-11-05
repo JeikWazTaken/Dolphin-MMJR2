@@ -138,6 +138,12 @@ public final class SettingsActivityPresenter
     return false;
   }
 
+  public boolean saveSettings()
+  {
+      mView.finish();
+      return true;
+  }
+
   public void onSettingChanged()
   {
     mShouldSave = true;

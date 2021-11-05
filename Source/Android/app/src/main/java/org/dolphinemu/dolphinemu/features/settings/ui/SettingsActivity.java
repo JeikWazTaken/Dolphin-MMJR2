@@ -2,6 +2,7 @@
 
 package org.dolphinemu.dolphinemu.features.settings.ui;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -11,14 +12,19 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.WindowCompat;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.dolphinemu.dolphinemu.NativeLibrary;
 import org.dolphinemu.dolphinemu.R;
@@ -62,6 +68,7 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
+//    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
     MainPresenter.skipRescanningLibrary();
 
@@ -82,6 +89,15 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
     Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
 
     toolbar.setOnMenuItemClickListener(this::onOptionsItemSelected);
+    ExtendedFloatingActionButton fab1 = (ExtendedFloatingActionButton) findViewById(R.id.fab_save);
+
+    fab1.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+          mPresenter.saveSettings();
+
+      }
+    });
   }
 
   @Override
@@ -175,6 +191,7 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
     return duration != 0 && transition != 0;
   }
 
+  @SuppressLint("WrongConstant")
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent result)
   {

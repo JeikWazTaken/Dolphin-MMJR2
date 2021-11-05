@@ -9,8 +9,10 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@color/dolphin_background</item>
-        <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/dolphin_background</item>
+<!--        <item name="android:statusBarColor">@color/dolphin_background</item>-->
+        <item name="android:windowLightStatusBar">true</item>
+<!--        <item name="android:navigationBarColor">@color/dolphin_background</item>-->
 
 
         <!-- Enable window content transitions -->
@@ -76,11 +78,16 @@
 <!-- SettingsActivity Themes, use default action bar, and mandate margins. -->
 
     <style name="Dolphin.Material.SettingsBase" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="windowActionModeOverlay">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/dolphin_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!--        <item name="android:statusBarColor">@color/dolphin_background</item>-->
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/dolphin_background</item>
+<!--        <item name="android:statusBarColor">@color/dolphin_background</item>-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--        <item name="android:navigationBarColor">@color/dolphin_background</item>-->
 
 
     </style>
