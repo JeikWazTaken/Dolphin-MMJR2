@@ -8,30 +8,30 @@
         <item name="colorDivider">@color/dolphin_background</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@color/dolphin_background</item>
-        <item name="android:navigationBarColor">@color/dolphin_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
 <!--        <item name="android:statusBarColor">@color/dolphin_background</item>-->
         <item name="android:windowLightStatusBar">true</item>
 <!--        <item name="android:navigationBarColor">@color/dolphin_background</item>-->
 
 
-        <!-- Enable window content transitions -->
-        <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowAllowEnterTransitionOverlap">true</item>
-        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+<!--        &lt;!&ndash; Enable window content transitions &ndash;&gt;-->
+<!--        <item name="android:windowContentTransitions">true</item>-->
+<!--        <item name="android:windowAllowEnterTransitionOverlap">true</item>-->
+<!--        <item name="android:windowAllowReturnTransitionOverlap">true</item>-->
 
-        <item name="android:colorControlHighlight">@color/divider</item>
-        <item name="alertDialogTheme">@style/DolphinDialogBase</item>
+<!--        <item name="android:colorControlHighlight">@color/divider</item>-->
+<!--        <item name="alertDialogTheme">@style/DolphinDialogBase</item>-->
 
-        <!-- Default gradient values -->
-        <item name="colorGradientPrimaryStart">@null</item>
-        <item name="colorGradientPrimaryCenter">@null</item>
-        <item name="colorGradientPrimaryEnd">@null</item>
-        <item name="colorGradientSecondaryStart">@null</item>
-        <item name="colorGradientSecondaryCenter">@null</item>
-        <item name="colorGradientSecondaryEnd">@null</item>
-        <item name="colorOnGradientPrimary">@color/material_dynamic_primary70</item>
-        <item name="textColorOnPrimary">@color/material_dynamic_primary70</item>
+<!--        &lt;!&ndash; Default gradient values &ndash;&gt;-->
+<!--        <item name="colorGradientPrimaryStart">@null</item>-->
+<!--        <item name="colorGradientPrimaryCenter">@null</item>-->
+<!--        <item name="colorGradientPrimaryEnd">@null</item>-->
+<!--        <item name="colorGradientSecondaryStart">@null</item>-->
+<!--        <item name="colorGradientSecondaryCenter">@null</item>-->
+<!--        <item name="colorGradientSecondaryEnd">@null</item>-->
+<!--        <item name="colorOnGradientPrimary">@color/material_dynamic_primary70</item>-->
+<!--        <item name="textColorOnPrimary">@color/material_dynamic_primary70</item>-->
         <item name="textColorAccent">@color/material_dynamic_primary70</item>
     </style>
 

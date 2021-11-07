@@ -20,23 +20,23 @@
         android:iconTint="@color/m3_primary_color"
         android:title="@string/grid_menu_gcpad_settings"
         android:visible="true"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:drawableTint="@color/m3_primary_color"
         app:tint="@color/m3_primary_color"
         />
 
     <item
         android:id="@+id/menu_settings_wiimote"
-        android:icon="@drawable/ic_settings_wii"
+        android:icon="@drawable/ic_settings_wiimote"
         android:title="@string/grid_menu_wiimote_settings"
         android:visible="true"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_open_file"
         android:icon="@android:drawable/ic_media_play"
         android:title="@string/grid_menu_open_file"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/menu_install_wad"

@@ -68,7 +68,7 @@ public final class SettingsActivity extends AppCompatActivity implements Setting
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
-//    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+    //WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
 
     MainPresenter.skipRescanningLibrary();
 

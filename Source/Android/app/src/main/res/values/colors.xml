@@ -10,6 +10,7 @@
     <color name="m3_tab_icon_color">@color/material_dynamic_primary40</color>
     <color name="m3_container_bg">@color/material_dynamic_neutral99</color>
     <color name="m3_fab_text_color">@color/material_dynamic_neutral90</color>
+    <color name="m3_button_text_color">@color/material_dynamic_primary99</color>
     <color name="icon_background">@color/m3_primary_color</color>
 
 
@@ -84,5 +85,6 @@
     <color name="nnf_dark_separator_color">@color/dolphin_background</color>
 
     <color name="invalid_setting_overlay">#36ff0000</color>
+
 
 </resources>

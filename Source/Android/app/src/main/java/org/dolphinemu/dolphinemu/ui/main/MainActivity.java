@@ -19,8 +19,11 @@ import androidx.core.view.WindowCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.color.DynamicColors;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
 import org.dolphinemu.dolphinemu.R;
@@ -52,8 +55,9 @@ public final class MainActivity extends AppCompatActivity
 {
   private ViewPager mViewPager;
   private Toolbar mToolbar;
-  private TabLayout mTabLayout;
+//  private TabLayout mTabLayout;
   private ExtendedFloatingActionButton mFab;
+  private BottomNavigationView bottomNavigationView;
 
   private final MainPresenter mPresenter = new MainPresenter(this, this);
 
@@ -61,8 +65,10 @@ public final class MainActivity extends AppCompatActivity
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
-//    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+
+    WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
     AppTheme.applyTheme(this);
+
     setContentView(R.layout.activity_main);
 
     findViews();
@@ -141,8 +147,9 @@ public final class MainActivity extends AppCompatActivity
   {
     mToolbar = findViewById(R.id.toolbar_main);
     mViewPager = findViewById(R.id.pager_platforms);
-    mTabLayout = findViewById(R.id.tabs_platforms);
+    //mTabLayout = findViewById(R.id.tabs_platforms);
     mFab = findViewById(R.id.button_add_directory);
+    bottomNavigationView = findViewById(R.id.bottomNavBar);
   }
 
   @Override
@@ -341,14 +348,60 @@ public final class MainActivity extends AppCompatActivity
             getSupportFragmentManager(), this, this);
     mViewPager.setAdapter(platformPagerAdapter);
     mViewPager.setOffscreenPageLimit(platformPagerAdapter.getCount());
-    mTabLayout.setupWithViewPager(mViewPager);
-    mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager)
-    {
+//    mTabLayout.setupWithViewPager(mViewPager);
+//    mTabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager)
+//    {
+//      @Override
+//      public void onTabSelected(@NonNull TabLayout.Tab tab)
+//      {
+//        super.onTabSelected(tab);
+//        IntSetting.MAIN_LAST_PLATFORM_TAB.setIntGlobal(NativeConfig.LAYER_BASE, tab.getPosition());
+//      }
+//    });
+    bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
       @Override
-      public void onTabSelected(@NonNull TabLayout.Tab tab)
-      {
-        super.onTabSelected(tab);
-        IntSetting.MAIN_LAST_PLATFORM_TAB.setIntGlobal(NativeConfig.LAYER_BASE, tab.getPosition());
+      public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+          case R.id.menu_platforms_gamecube:
+            mViewPager.setCurrentItem(0);
+            IntSetting.MAIN_LAST_PLATFORM_TAB.setIntGlobal(NativeConfig.LAYER_BASE, mViewPager.getCurrentItem());
+            break;
+          case R.id.menu_platforms_wii:
+            mViewPager.setCurrentItem(1);
+            IntSetting.MAIN_LAST_PLATFORM_TAB.setIntGlobal(NativeConfig.LAYER_BASE, mViewPager.getCurrentItem());
+            break;
+          case R.id.menu_platforms_wii_ware:
+            mViewPager.setCurrentItem(2);
+            IntSetting.MAIN_LAST_PLATFORM_TAB.setIntGlobal(NativeConfig.LAYER_BASE, mViewPager.getCurrentItem());
+            break;
+        }
+        return false;
+      }
+    });
+    mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+      @Override
+      public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+      }
+
+      @Override
+      public void onPageSelected(int position) {
+        switch (position) {
+          case 0:
+            bottomNavigationView.getMenu().findItem(R.id.menu_platforms_gamecube).setChecked(true);
+            break;
+          case 1:
+            bottomNavigationView.getMenu().findItem(R.id.menu_platforms_wii).setChecked(true);
+            break;
+          case 2:
+            bottomNavigationView.getMenu().findItem(R.id.menu_platforms_wii_ware).setChecked(true);
+            break;
+        }
+      }
+
+      @Override
+      public void onPageScrollStateChanged(int state) {
+
       }
     });
 
@@ -356,5 +409,10 @@ public final class MainActivity extends AppCompatActivity
 
     showGames();
     GameFileCacheService.startLoad(this);
+  }
+
+  @Override
+  public boolean onContextItemSelected(@NonNull MenuItem item) {
+    return super.onContextItemSelected(item);
   }
 }

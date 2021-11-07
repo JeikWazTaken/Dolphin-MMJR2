@@ -12,5 +12,5 @@
     <color name="m3_secondary_color">@color/material_dynamic_secondary20</color>
     <color name="m3_secondary_text_color">@color/material_dynamic_secondary80</color>
     <color name="m3_tab_icon_color">@color/material_dynamic_primary95</color>
-
+    <color name="m3_button_text_color">@color/material_dynamic_primary90</color>
 </resources>

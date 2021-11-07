@@ -81,7 +81,7 @@ public class AppTheme
           break;
 
         default:
-          themeId = R.style.Theme_Material3_DynamicColors_DayNight;
+          themeId = R.style.Dolphin_Material_SettingsBase;
           break;
       }
     }
@@ -91,11 +91,11 @@ public class AppTheme
       {
 
         case AppTheme.DOLPHIN_BLUE:
-          themeId = R.style.Theme_DolphinEmulation_DolphinBlue;
+          themeId = R.style.DolphinBase;
           break;
 
         default:
-          themeId = R.style.Theme_Material3_DynamicColors_DayNight;
+          themeId = R.style.DolphinBase;
           break;
       }
     }
@@ -109,7 +109,7 @@ public class AppTheme
           break;
 
         default:
-          themeId = R.style.Theme_Material3_DynamicColors_DayNight;
+          themeId = R.style.DolphinBase;
           break;
       }
     }
@@ -122,7 +122,7 @@ public class AppTheme
           themeId = R.style.Theme_DolphinMain_DolphinBlue;
           break;
         default:
-          themeId = R.style.Theme_Material3_DynamicColors_DayNight;
+          themeId = R.style.DolphinBase;
           break;
       }
     }

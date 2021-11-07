@@ -108,15 +108,15 @@
 <!--&lt;!&ndash;        android:layout_marginHorizontal="1dp"&ndash;&gt;-->
 <!--&lt;!&ndash;        android:background="@color/divider_dark" />&ndash;&gt;-->
 
+
     <Button
         android:id="@+id/menu_exit"
-        style="@style/OverlayInGameMenuOption"
-        android:layout_width="210dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
         android:layout_gravity="center"
-        android:background="@color/m3_primary_color"
-        android:text="@string/emulation_exit"
-        android:fontFamily="sans-serif"
-        android:textAlignment="center"
-        android:textStyle="bold" />
+        android:text="Exit Emulation"
+        android:textColor="@color/m3_button_text_color"/>
 
 </LinearLayout>
